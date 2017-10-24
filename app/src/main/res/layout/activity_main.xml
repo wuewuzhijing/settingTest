@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.liuyang.restartapp.MainActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:onClick="restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点我重启"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:onClick="distanceINIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="初始化红外测距"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:onClick="distanceStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始测距检测"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="50dp">
+        <!--
+        android:max="":设置最大进度
+        android:progress=""：设置当前进度
+        android:secondaryProgress=""：设置第二进度
+        android:indeterminate=""：设置是否为不明确进度进度条
+        android:thumb="":设置seekbar滑动快的图片
+        android:progressDrawable="":进度条背景图片
+        android:thumbTint="":滑动块颜色,API21以上才有效
+        -->
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:max="100"
+            android:progress="60"
+            android:indeterminate="false" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_below="@+id/seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
